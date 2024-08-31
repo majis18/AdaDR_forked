@@ -11,3 +11,5 @@ python==3.8.1
 ```
 run drug_train.py 
 ```
+# How to install libraries
+[text](create_dgl_env.ipynb)
