@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "test-dgl-env"
+version = "0.1.0"
+description = ""
+authors = ["shota majima"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.9"
+pydantic = "^2.8.2"
+pyyaml = "^6.0.2"
+numpy = "1.26.4"
+torch = "2.1.2"
+torchvision = "0.16.2"
+torchaudio = "2.1.2"
+torchdata = "0.7.1"
+dgl = {url = "https://data.dgl.ai/wheels/dgl-2.2.1-cp311-cp311-macosx_11_0_arm64.whl"}
+ipykernel = "^6.29.5"
+ipywidgets = "^8.1.5"
+
+[[tool.poetry.source]]
+name = "src_dgl"
+url = "https://data.dgl.ai/wheels/repo.html"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
