@@ -17,6 +17,9 @@ torchdata = "0.7.1"
 dgl = {url = "https://data.dgl.ai/wheels/dgl-2.2.1-cp311-cp311-macosx_11_0_arm64.whl"}
 ipykernel = "^6.29.5"
 ipywidgets = "^8.1.5"
+scikit-learn = "^1.5.1"
+scipy = "^1.14.1"
+pandas = "^2.2.2"
 
 [[tool.poetry.source]]
 name = "src_dgl"
