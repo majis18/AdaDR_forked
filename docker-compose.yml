@@ -1,0 +1,19 @@
+services:
+  notebook:
+    image: nvcr.io/nvidia/dgl:24.07-py3
+    container_name: dgl_2.4
+    ports:
+      - "1018:8888"
+    volumes:
+      - ./workspace:/workspace
+    working_dir: /workspace
+    command: jupyter notebook --ip=0.0.0.0 --allow-root --no-browser --port=8888
+    stdin_open: true
+    tty: true
+    # GPU環境で実行する場合には以下のコメントアウトを外す
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+              device_ids: ["0"]
