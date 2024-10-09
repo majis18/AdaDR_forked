@@ -13,7 +13,6 @@ _paths = {
     'Cdataset': './raw_data/drug_data/Cdataset/Cdataset.mat',
     'Ldataset': './raw_data/drug_data/Ldataset/lagcn',
     'lrssl': './raw_data/drug_data/lrssl',
-
 }
 
 
