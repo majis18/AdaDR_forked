@@ -87,7 +87,7 @@ def train(args, dataset, graph_data, cv):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='AdaDR')
     parser.add_argument('--seed', default=125, type=int)
-    parser.add_argument('--device', default='3', type=int,
+    parser.add_argument('--device', default='0', type=int, # set 0 for gpu use
                         help='Running device. E.g `--device 0`, if using cpu, set `--device -1`')
     parser.add_argument('--save_dir', type=str, help='The saving directory')
     parser.add_argument('--save_id', type=int, help='The saving log id')
