@@ -30,8 +30,10 @@ def sparse_mx_to_torch_sparse_tensor(sparse_mx):
     sparse_mx = sparse_mx.tocoo().astype(np.float32)
     indices = th.from_numpy(np.vstack((sparse_mx.row, sparse_mx.col)).astype(np.int64))
     values = th.from_numpy(sparse_mx.data)
-    shape = th.Size(sparse_mx.shape)
-    return th.sparse.FloatTensor(indices, values, shape)
+    # shape = th.Size(sparse_mx.shape)
+    shape = sparse_mx.shape
+    # return th.sparse.FloatTensor(indices, values, shape)
+    return th.sparse_coo_tensor(indices, values, shape)
 
 
 class DrugDataLoader(object):
