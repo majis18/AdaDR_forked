@@ -1,7 +1,7 @@
 services:
   notebook:
     image: nvcr.io/nvidia/dgl:24.07-py3
-    container_name: dgl_2.4
+    container_name: majima_dgl_2.4
     ports:
       - "1018:8888"
     volumes:
